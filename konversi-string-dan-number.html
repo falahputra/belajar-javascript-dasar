@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi String dan Number</title>
+</head>
+<body>
+<script>
+
+    // parseInt(string) string to int
+    // parseFloat(string) string to float
+    // Number(string) string to number
+    // number.toString() number to string
+
+    const value1 = "1";
+    const value2 = 1;
+    const sum = parseInt(value1) + value2;
+    console.log(sum);
+
+
+    document.writeln(`<p> ${sum} </p>`);
+    document.writeln(`<p> ${parseInt("1.1")} </p>`);
+    document.writeln(`<p> ${parseFloat("1.1")} </p>`);
+    document.writeln(`<p> ${Number("1.1")} </p>`);
+    document.writeln(`<p> ${(1.1).toString()} </p>`);
+
+
+    document.writeln(`<p> ${parseInt("1.1awda")} </p>`);
+    document.writeln(`<p> ${parseFloat("1.13421asada")} </p>`);
+    document.writeln(`<p> ${Number("12lala")} </p>`);
+    // Mengoperasikan NaN pada nilai lain akan menghasilkan NaN lagi
+
+    document.writeln(`<p> ${isNaN("12lala")} </p>`);
+    document.writeln(`<p> ${isNaN("1.32")} </p>`);
+    
+
+</script>
+    
+</body>
+</html>
