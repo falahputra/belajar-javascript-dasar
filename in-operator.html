@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Operator</title>
+</head>
+<body>
+<script>
+    let person = {
+        'name' : "SAn",
+        'lastName' : "Last Name",
+        'anak' : undefined,
+        'cucu' : null,
+    }
+
+    // nilai undefined atau null tetap akan menghasilkan true jika properynya ada
+    if ('cucuc' in person){
+        console.table(person);
+    }
+    else{
+        console.log("Tidak ada property");
+    }
+
+    let array = [null, null, null];
+    if (0 in array){
+        console.table(array);
+    }
+    else{
+        console.log("Out of index");
+    }
+</script>
+</body>
+</html>
