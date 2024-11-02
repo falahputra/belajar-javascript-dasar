@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+<script>
+
+    // Standar get manual array
+    const names = ["Eko", "Kurniawan", "Khannedy", "Budi", "Joko"];
+
+    // const firstName = names[0];
+    // const middleName = names[1];
+    // const lastName = names[2];
+
+
+
+    // Destructuring array
+
+    const [firstName, middleName, lastName, ...others] = names;
+
+    console.log(firstName);
+    console.log(middleName);
+    console.log(lastName);
+    console.log(others);
+
+    // Destructuring object
+    const person = {
+        awalName : "Eko",
+        akhirName : "Khannedy",
+        address : {
+            street: "Jalan jalan",
+            city : "Jakarta",
+            country : "Indonesia"
+        },
+        hoby : "Game",
+        channel : "Hasanul",
+    }
+
+    const {awalName, akhirName, address : {street,city,country}, ...lain} = person;
+    console.log(awalName);
+    console.log(akhirName);
+    console.log(street);
+    console.log(city);
+    console.log(country);
+
+    console.log(lain);
+
+    // Destructuring function in pparameter 1
+    function displayPerson({awalName, akhirName}){
+        console.log("Function");
+        console.log(awalName);
+        console.log(akhirName);
+    }
+    displayPerson(person);
+
+    // Destructuring function in pparameter 2
+    function sum([first, seccond]){
+        return first + seccond;
+    }
+    console.log(sum([10,40]));
+
+    // Destructuing with default value
+    const array1 = ["Satu", "Dua"];
+
+    const [satu, dua, tiga = "Tidak Ketemu"] = array1;
+
+    console.log(satu);
+    console.log(dua);
+    console.log(tiga);
+
+    const person2 = {
+        nama_1 : "Nama",
+        umur_1 : 21,
+    }
+
+    const {nama_1, umur_1, hooby = "Tidak ketemu"} = person2;
+    console.log(nama_1);
+    console.log(umur_1);
+    console.log(hooby);
+
+    const family = {
+        father : "Bapak",
+        mother : "Ibu",
+    }
+
+    const {father : ayah, mother : ibu} = family;
+    console.log(ayah);
+    console.log(ibu);
+
+
+</script>
+</body>
+</html>
