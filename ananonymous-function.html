@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function</title>
+</head>
+<body>
+<script>
+    const say = function(name){
+        console.log(`Helllo ${name}`);
+    }
+
+    say("Eko");
+    say("BBudi");
+
+    function giveMeName(callback){
+        callback("Manggil function");
+    }
+
+    giveMeName(function (name){
+        console.log(`Helllllllo ${name}`);
+        
+    });
+</script>
+</body>
+</html>
