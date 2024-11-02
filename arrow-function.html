@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+<script>
+
+    // Standar arrow function
+    const sayHello = (nama)=>{
+        console.log(`Hello ${nama}`);
+    }
+    sayHello("Jokooo")
+
+    // Arrow function tanpa block
+    const sayHello1 = (nama)=> console.log(`Hello ${nama}`);
+    sayHello1("Widodooo")
+
+    // arrow function return value
+
+    const sum = (first, seccond) => first + seccond;
+
+    console.log(sum(100,200));
+
+    // arrow function tanppa urung parameter
+    const sayHello2 = nama => `Hello ${nama}`;
+
+    console.log(sayHello2("WIWIWIWIW"))
+
+    // arrow function sebagai parameter
+    function giveMeName(callback){
+        callback("Ekooo");
+    }
+
+    giveMeName(name=>console.log(`Hello ${name}`));
+    
+</script>
+</body>
+</html>
