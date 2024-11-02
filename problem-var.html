@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem With Var</title>
+</head>
+<body>
+<script>
+    // Var have problem with global scope or local scope
+
+    let i = 20;
+    for (let i = 1; i<=10; i++){
+        console.log("local " + i);
+    }
+    console.log(i);
+    // i still 20
+
+    var j = 20;
+    for (var j = 1; j<=10; j++){
+        console.log("local " + j);
+    }
+    console.log(j);
+    // J change to 11
+</script>
+</body>
+</html>
